@@ -1,0 +1,76 @@
+name = raw_input("What is your name traveler?")
+if name == "John Egbert":
+     print "A young man stands in his bedroom. It just so happens that today, the 13th of April, 2009, is this young man's birthday. Though it was thirteen years ago he was given life, it is only today he will be given a name!"
+else:
+     print "--Ah, %s, the fair maiden. I've heard many stories about your beauty, but it is nothing compared to seeing it with my own eyes" % (name)
+
+quest = raw_input("Where are you going, M'lady?")
+
+print "--%s, are you certain you want to go to %s right now? You might stay here a while, rest up. I own an inn that you can stay at tonight, and for as long as you want, free of charge!" % (name,quest)
+
+stayornah = raw_input("Stay the night in the inn?")
+
+if stayornah == "yes" or stayornah == "y" or stayornah == "Yes" or stayornah == "Y":
+    print "You decide to stay the night"
+    raw_input("(Press enter to sleep)")
+
+    print "                               ---sleeping---"
+    print "								Your HP is replenished"
+    HP = 100
+    GLD = 100
+
+    raw_input("(Press enter to wake up)")
+
+    print "--You wake up to a lavish breakfast in bed, catered by the same man who invited you in yesterday."
+
+    spot_check = raw_input("check for poison? yes or no?")
+
+    if spot_check == "yes" or spot_check == "y" or spot_check == "Yes" or spot_check == "Y":
+         print "--Due to your honed survival stat, you successfully check for poison and find none."
+    elif spot_check == "no" or spot_check == "n" or spot_check == "No" or spot_check == "N":
+         print "--You decide not to bother, the man seems nice enough."
+    else:
+         print "--Well then..."
+
+    you = raw_input("Do you think the man was thoughtful to prepare this for you? yes or no?")
+
+    if you == "yes" or you == "y" or you == "Yes" or you == "Y":
+        print "--You smile at the man, and dig in."
+    elif you == "no" or you == "n" or you == "No" or you == "N":
+         print "--You glare at the man for his unthoughtfulness, but eat anyway."
+    else:
+         print "--Well then..."
+
+    raw_input("(Press enter to survey meal)")
+
+    print "--The meal consists of exactly 3 medium crepes with strawberries, blueberries, and some powdered sugar dashed on top. On the side was assorted tropical fruits, only the best, for a noble lady such as yourself. For a drink, you have a simple glass of juice, you're not sure what flavor it is, but it looks exotic."
+
+    choo = raw_input("Type 'Food' to eat or 'Drink' to drink.")
+    if choo == "Food" or choo == "food":
+        print "--You begin to eat the main dish."
+    elif choo == "Drink" or choo == "drink":
+        print "--You reach for your unknown drink."
+    else:
+        print "--Well then..."
+
+    raw_input("The demo is over. Would you play the full release?")
+
+    print "Thanks for your opinion!"
+
+    print "                                ---GAME OVER---"
+
+elif stayornah == "no":
+    print "You decide not to stay the night"
+    HP = 50
+    HP = HP + 1
+    GLD = 50
+    print HP
+    
+    print "                                ---GAME OVER---"
+else:
+    print"--Since you refuse to cooperate, you will be eaten by harpies"
+    HP = "0"
+
+if HP == "0":
+	print"You ran out of health..."
+	print"                                ---GAME OVER---"
